@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nannaka Uday — ML & AI Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-inner">
+            <div class="loader-line"></div>
+            <div class="loader-text">
+                <span class="loader-letter" style="--i:0">L</span>
+                <span class="loader-letter" style="--i:1">O</span>
+                <span class="loader-letter" style="--i:2">A</span>
+                <span class="loader-letter" style="--i:3">D</span>
+                <span class="loader-letter" style="--i:4">I</span>
+                <span class="loader-letter" style="--i:5">N</span>
+                <span class="loader-letter" style="--i:6">G</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">NU</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#home" class="nav-link active" data-index="01">Home</a>
+                <a href="#about" class="nav-link" data-index="02">About</a>
+                <a href="#skills" class="nav-link" data-index="03">Skills</a>
+                <a href="#projects" class="nav-link" data-index="04">Projects</a>
+                <a href="#experience" class="nav-link" data-index="05">Experience</a>
+                <a href="#contact" class="nav-link" data-index="06">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="gradient-orb gradient-orb-1"></div>
+            <div class="gradient-orb gradient-orb-2"></div>
+            <div class="gradient-orb gradient-orb-3"></div>
+            <div class="particles" id="particles"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge reveal-up">
+                    <span class="status-dot"></span>
+                    Open to ML/AI Engineer Roles
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-line reveal-up" style="--delay: 0.1s">Hi, I'm</span>
+                    <span class="hero-line hero-name reveal-up" style="--delay: 0.2s">
+                        <span class="gradient-text">Nannaka Uday</span>
+                    </span>
+                    <span class="hero-line reveal-up" style="--delay: 0.3s">
+                        I build intelligent
+                        <span class="typing-container">
+                            <span class="typed-text" id="typed-text"></span>
+                            <span class="cursor-blink">|</span>
+                        </span>
+                    </span>
+                </h1>
+                <p class="hero-description reveal-up" style="--delay: 0.4s">
+                    Machine Learning &amp; Generative AI Engineer specializing in 
+                    time-series forecasting, deep learning, and RAG pipelines. 
+                    Turning data into actionable intelligence with Python, TensorFlow &amp; PyTorch.
+                </p>
+                <div class="hero-cta reveal-up" style="--delay: 0.5s">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Projects</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+                <div class="hero-stats reveal-up" style="--delay: 0.6s">
+                    <div class="stat">
+                        <span class="stat-number" data-target="8">0</span><span class="stat-plus">.0</span>
+                        <span class="stat-label">CGPA</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual reveal-up" style="--delay: 0.3s">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">uday_ml.py</span>
+                    </div>
+                    <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-variable">MLEngineer</span>:
+    <span class="code-keyword">def</span> <span class="code-method">__init__</span>(<span class="code-variable">self</span>):
+        <span class="code-variable">self</span>.<span class="code-property">name</span> = <span class="code-string">"Nannaka Uday"</span>
+        <span class="code-variable">self</span>.<span class="code-property">role</span> = <span class="code-string">"ML & AI Engineer"</span>
+        <span class="code-variable">self</span>.<span class="code-property">stack</span> = [
+            <span class="code-string">"Python"</span>, <span class="code-string">"TensorFlow"</span>,
+            <span class="code-string">"PyTorch"</span>, <span class="code-string">"Scikit-Learn"</span>
+        ]
+
+    <span class="code-keyword">def</span> <span class="code-method">build</span>(<span class="code-variable">self</span>):
+        <span class="code-keyword">return</span> <span class="code-string">"Intelligent Systems 🚀"</span></code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">// About Me</span>
+                <h2 class="section-title reveal-up">
+                    Turning <span class="gradient-text">Data</span> into Intelligence
+                </h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image reveal-left">
+                    <div class="about-image-wrapper">
+                        <div class="about-avatar">
+                            <div class="avatar-placeholder">
+                                <svg viewBox="0 0 120 120" fill="none">
+                                    <rect width="120" height="120" rx="20" fill="url(#avatar-grad)"/>
+                                    <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="40" font-weight="700" font-family="Inter">NU</text>
+                                    <defs><linearGradient id="avatar-grad" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="about-image-border"></div>
+                        <div class="about-experience-badge">
+                            <span class="exp-number">8.0</span>
+                            <span class="exp-text">CGPA<br>B.Tech CSE</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-text reveal-right">
+                        I'm a <strong>Machine Learning and Generative AI Engineer</strong> with hands-on 
+                        experience building time-series forecasting and sensor-based activity 
+                        classification models using supervised learning and deep learning (LSTM). 
+                        Proficient in Python, TensorFlow, and Scikit-Learn.
+                    </p>
+                    <p class="about-text reveal-right">
+                        I believe that AI is about more than just building models — it's about solving 
+                        real-world problems and creating intelligent systems that make a difference. 
+                        From RAG pipelines to weather forecasting, I bring my commitment to excellence 
+                        and data-driven thinking to every project.
+                    </p>
+                    <div class="about-info reveal-right">
+                        <div class="info-item">
+                            <span class="info-label">Name</span>
+                            <span class="info-value">Nannaka Uday</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">udaynannaka999@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Education</span>
+                            <span class="info-value">B.Tech CSE (AI & ML)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">Hyderabad, India</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Languages</span>
+                            <span class="info-value">English, Telugu</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Status</span>
+                            <span class="info-value available">Seeking Opportunities</span>
+                        </div>
+                    </div>
+                    <a href="resume.pdf" class="btn btn-primary reveal-right" download>
+                        <span>Download Resume</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">// My Skills</span>
+                <h2 class="section-title reveal-up">
+                    My <span class="gradient-text">Tech Stack</span> & Expertise
+                </h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal-up" style="--delay: 0.1s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        </div>
+                        <h3>Machine Learning</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Supervised Learning</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Random Forest / Classification</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Feature Engineering</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Model Evaluation</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up" style="--delay: 0.2s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3>Deep Learning & AI</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>TensorFlow / Keras</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>PyTorch</span><span>78%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 78%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Neural Networks / LSTM</span><span>82%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 82%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Generative AI / Prompt Eng.</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up" style="--delay: 0.3s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Programming & Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python</span><span>92%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 92%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>SQL / MySQL</span><span>80%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML / CSS</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Git / Jupyter / VS Code</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up" style="--delay: 0.4s">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                        </div>
+                        <h3>Data Science Libraries</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Pandas / NumPy</span><span>90%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Scikit-Learn</span><span>88%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Matplotlib / Seaborn</span><span>85%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Power BI</span><span>75%</span></div>
+                            <div class="skill-bar"><div class="skill-progress" style="--width: 75%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">// My Work</span>
+                <h2 class="section-title reveal-up">
+                    Featured <span class="gradient-text">Projects</span>
+                </h2>
+                <p class="section-subtitle reveal-up">
+                    Here are my key projects showcasing ML, Deep Learning, and Generative AI expertise.
+                </p>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: RAG Chatbot -->
+                <div class="project-card featured reveal-up" data-category="ai" style="--delay: 0.1s">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                        <div class="project-featured-tag">Featured</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>RAG</span><span>Gemini</span><span>PyMuPDF</span><span>Embeddings</span>
+                        </div>
+                        <h3 class="project-title">RAG-based PDF Q&A Chatbot</h3>
+                        <p class="project-desc">Built a Retrieval-Augmented Generation pipeline that answers questions from uploaded PDFs using Google Gemini. Chunked PDF text with PyMuPDF, embedded using all-MiniLM-L6-v2, and retrieved top-4 chunks by cosine similarity with page citations.</p>
+                        <div class="project-highlights">
+                            <span>🔍 Cosine Similarity Retrieval</span>
+                            <span>📄 Page Citations</span>
+                            <span>🤖 Grounded Prompts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Weather Forecasting -->
+                <div class="project-card featured reveal-up" data-category="ml" style="--delay: 0.2s">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                        <div class="project-featured-tag">Featured</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>ARIMA</span><span>Random Forest</span><span>LSTM</span><span>Python</span>
+                        </div>
+                        <h3 class="project-title">Weather Forecasting System</h3>
+                        <p class="project-desc">End-to-end ML pipeline for time-series forecasting of weather variables. Cleaned historical temperature, humidity, and precipitation data. Trained and compared ARIMA, Random Forest, and LSTM models for best forecasting approach.</p>
+                        <div class="project-highlights">
+                            <span>📈 Time-Series Analysis</span>
+                            <span>🧹 Data Cleaning</span>
+                            <span>⚡ Model Comparison</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: HAR System -->
+                <div class="project-card featured reveal-up" data-category="ml" style="--delay: 0.3s">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="project-overlay">
+                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </a>
+                        </div>
+                        <div class="project-featured-tag">Featured</div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Scikit-Learn</span><span>IMU Data</span><span>Classification</span>
+                        </div>
+                        <h3 class="project-title">Human Activity Recognition</h3>
+                        <p class="project-desc">Supervised ML pipeline to classify physical activities from multi-axis accelerometer and gyroscope (IMU) data. Preprocessed raw sensor signals and engineered time-windowed features for activity classification. Applied to healthcare monitoring and fitness tracking.</p>
+                        <div class="project-highlights">
+                            <span>🏃 Activity Classification</span>
+                            <span>📱 Sensor Data</span>
+                            <span>🏥 Healthcare Use-Case</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">// Experience & Education</span>
+                <h2 class="section-title reveal-up">
+                    My <span class="gradient-text">Journey</span> So Far
+                </h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-left" style="--delay: 0.1s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2022 — 2026</span>
+                            <span class="timeline-badge">Education</span>
+                        </div>
+                        <h3 class="timeline-title">B.Tech, Computer Science & Engineering (AI & ML)</h3>
+                        <span class="timeline-company">Guru Nanak Institutions Technical Campus, Hyderabad</span>
+                        <p class="timeline-desc">Pursuing B.Tech in CSE with specialization in Artificial Intelligence and Machine Learning. Maintaining a CGPA of 8.0/10 with hands-on project experience in ML, Deep Learning, and Generative AI.</p>
+                        <div class="timeline-tags">
+                            <span>AI/ML</span><span>Python</span><span>Deep Learning</span><span>CGPA: 8.0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right" style="--delay: 0.2s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2023</span>
+                            <span class="timeline-badge current">Experience</span>
+                        </div>
+                        <h3 class="timeline-title">AI & Prompt Engineering Intern</h3>
+                        <span class="timeline-company">VaultOfCodes.in</span>
+                        <p class="timeline-desc">Designed and tested prompt templates across multiple AI use cases to improve response accuracy and consistency. Collaborated with a cross-functional team to debug and refine AI-driven workflows. Authored an internal prompt-engineering guide, adopted for onboarding new contributors.</p>
+                        <div class="timeline-tags">
+                            <span>Prompt Engineering</span><span>Generative AI</span><span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-left" style="--delay: 0.3s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">Training</span>
+                            <span class="timeline-badge">Training</span>
+                        </div>
+                        <h3 class="timeline-title">Generative AI Training</h3>
+                        <span class="timeline-company">AIMNXT</span>
+                        <p class="timeline-desc">Completed professional training in Generative AI covering fundamental concepts, applications, and AI-powered technologies. Gained knowledge of Prompt Engineering, interacting with Generative AI models, and techniques for generating relevant and effective outputs.</p>
+                        <div class="timeline-tags">
+                            <span>Generative AI</span><span>Prompt Engineering</span><span>AI Applications</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-right" style="--delay: 0.4s">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <span class="timeline-date">2020 — 2022</span>
+                        </div>
+                        <h3 class="timeline-title">Intermediate (MPC)</h3>
+                        <span class="timeline-company">Sri Chaitanya Jr. College, Khammam</span>
+                        <p class="timeline-desc">Completed Intermediate education in Mathematics, Physics, and Chemistry with CGPA 8.58/10.</p>
+                        <div class="timeline-tags">
+                            <span>MPC</span><span>CGPA: 8.58</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="certifications reveal-up" style="--delay: 0.5s">
+                <h3 class="cert-title">🏆 Certifications</h3>
+                <div class="cert-grid">
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <strong>Artificial Intelligence</strong>
+                            <span>IBM SkillsBuild</span>
+                        </div>
+                    </div>
+                    <div class="cert-card">
+                        <div class="cert-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                        </div>
+                        <div class="cert-info">
+                            <strong>Python</strong>
+                            <span>Kaggle — Certificate of Completion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">// Contact</span>
+                <h2 class="section-title reveal-up">
+                    Let's <span class="gradient-text">Connect</span>
+                </h2>
+                <p class="section-subtitle reveal-up">
+                    Interested in collaborating or have an opportunity? Let's talk!
+                </p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal-left">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div>
+                            <h4>Email Me</h4>
+                            <a href="mailto:udaynannaka999@gmail.com">udaynannaka999@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Hyderabad, India</span>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+919701276579">+91 97012 76579</a>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/UDAYNANNAKA" target="_blank" class="social-link" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://linkedin.com/in/udaynannaka" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="mailto:udaynannaka999@gmail.com" class="social-link" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal-right" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required placeholder=" ">
+                        <label for="subject">Subject</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="nav-logo">
+                        <span class="logo-bracket">{</span>
+                        <span class="logo-text">NU</span>
+                        <span class="logo-bracket">}</span>
+                    </a>
+                    <p>Building intelligent systems that make a difference.</p>
+                </div>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nannaka Uday. All rights reserved.</p>
+                <p>Designed & Built with <span class="heart">&hearts;</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
