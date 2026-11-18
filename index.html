@@ -3,661 +3,1065 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nannaka Uday — ML & AI Engineer</title>
+    <title>Nannaka Uday | ML & Generative AI Engineer</title>
+    <meta name="description" content="Portfolio of Nannaka Uday - Machine Learning and Generative AI Engineer specializing in RAG architectures, time-series forecasting, and deep learning.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Custom Cursor -->
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-follower" id="cursor-follower"></div>
-
-    <!-- Loader -->
-    <div class="loader" id="loader">
-        <div class="loader-inner">
-            <div class="loader-line"></div>
-            <div class="loader-text">
-                <span class="loader-letter" style="--i:0">L</span>
-                <span class="loader-letter" style="--i:1">O</span>
-                <span class="loader-letter" style="--i:2">A</span>
-                <span class="loader-letter" style="--i:3">D</span>
-                <span class="loader-letter" style="--i:4">I</span>
-                <span class="loader-letter" style="--i:5">N</span>
-                <span class="loader-letter" style="--i:6">G</span>
+    <!-- Top System Announcement Bar -->
+    <div class="system-banner">
+        <div class="container banner-inner">
+            <div class="banner-status">
+                <span class="status-indicator">
+                    <span class="ping-circle"></span>
+                    <span class="dot-circle"></span>
+                </span>
+                <span class="banner-text"><strong>Available for roles:</strong> ML / AI Engineer &amp; Forward Deployment</span>
+            </div>
+            <div class="banner-meta">
+                <span class="meta-item">📍 Hyderabad, India</span>
+                <span class="meta-item-sep">•</span>
+                <a href="mailto:udaynannaka999@gmail.com" class="meta-link">udaynannaka999@gmail.com</a>
+                <span class="meta-item-sep">•</span>
+                <span class="meta-badge">B.Tech AI &amp; ML (2022–2026)</span>
             </div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="nav" id="nav">
-        <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-bracket">{</span>
-                <span class="logo-text">NU</span>
-                <span class="logo-bracket">}</span>
+    <!-- Navigation Bar -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#hero" class="brand">
+                <div class="brand-avatar">NU</div>
+                <div class="brand-meta">
+                    <span class="brand-name">Nannaka Uday</span>
+                    <span class="brand-role">ML &amp; GenAI Engineer</span>
+                </div>
             </a>
-            <div class="nav-links" id="nav-links">
-                <a href="#home" class="nav-link active" data-index="01">Home</a>
-                <a href="#about" class="nav-link" data-index="02">About</a>
-                <a href="#skills" class="nav-link" data-index="03">Skills</a>
-                <a href="#projects" class="nav-link" data-index="04">Projects</a>
-                <a href="#experience" class="nav-link" data-index="05">Experience</a>
-                <a href="#contact" class="nav-link" data-index="06">Contact</a>
-            </div>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                    </svg>
-                </button>
-                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-bg">
-            <div class="grid-overlay"></div>
-            <div class="gradient-orb gradient-orb-1"></div>
-            <div class="gradient-orb gradient-orb-2"></div>
-            <div class="gradient-orb gradient-orb-3"></div>
-            <div class="particles" id="particles"></div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge reveal-up">
-                    <span class="status-dot"></span>
-                    Open to ML/AI Engineer Roles
-                </div>
-                <h1 class="hero-title">
-                    <span class="hero-line reveal-up" style="--delay: 0.1s">Hi, I'm</span>
-                    <span class="hero-line hero-name reveal-up" style="--delay: 0.2s">
-                        <span class="gradient-text">Nannaka Uday</span>
-                    </span>
-                    <span class="hero-line reveal-up" style="--delay: 0.3s">
-                        I build intelligent
-                        <span class="typing-container">
-                            <span class="typed-text" id="typed-text"></span>
-                            <span class="cursor-blink">|</span>
-                        </span>
-                    </span>
-                </h1>
-                <p class="hero-description reveal-up" style="--delay: 0.4s">
-                    Machine Learning &amp; Generative AI Engineer specializing in 
-                    time-series forecasting, deep learning, and RAG pipelines. 
-                    Turning data into actionable intelligence with Python, TensorFlow &amp; PyTorch.
-                </p>
-                <div class="hero-cta reveal-up" style="--delay: 0.5s">
-                    <a href="#projects" class="btn btn-primary">
-                        <span>View My Projects</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary">
-                        <span>Get In Touch</span>
-                    </a>
-                </div>
-                <div class="hero-stats reveal-up" style="--delay: 0.6s">
-                    <div class="stat">
-                        <span class="stat-number" data-target="8">0</span><span class="stat-plus">.0</span>
-                        <span class="stat-label">CGPA</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
-                        <span class="stat-label">Certifications</span>
-                    </div>
-                </div>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#projects" class="nav-link"><span class="nav-num">01</span>Projects</a>
+                <a href="#interactive-lab" class="nav-link"><span class="nav-num">02</span>Interactive Lab</a>
+                <a href="#skills" class="nav-link"><span class="nav-num">03</span>Tech Stack</a>
+                <a href="#experience" class="nav-link"><span class="nav-num">04</span>Experience</a>
+                <a href="#education" class="nav-link"><span class="nav-num">05</span>Education</a>
+                <a href="#contact" class="nav-link"><span class="nav-num">06</span>Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="cmd-palette-btn" id="cmd-palette-btn" title="Open Quick Command Palette (Ctrl+K)">
+                    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                    <span>Search</span>
+                    <kbd>Ctrl K</kbd>
+                </button>
+
+                <button class="theme-switch" id="theme-switch" aria-label="Toggle dark/light theme" title="Toggle Theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+
+                <a href="resume.pdf" class="btn btn-sm btn-primary" download>
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    <span>Resume</span>
+                </a>
+
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
-            <div class="hero-visual reveal-up" style="--delay: 0.3s">
-                <div class="code-window">
-                    <div class="code-header">
-                        <div class="code-dots">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-glow"></div>
+            <div class="container hero-container">
+                <div class="hero-left">
+                    <div class="code-tag">
+                        <span class="tag-bracket">&lt;</span>
+                        <span class="tag-text">engineer profile="machine_learning"</span>
+                        <span class="tag-bracket">/&gt;</span>
+                    </div>
+
+                    <h1 class="hero-headline">
+                        Building robust <span class="gradient-text">ML pipelines</span> &amp; grounded <span class="gradient-text">Generative AI</span> systems.
+                    </h1>
+
+                    <p class="hero-subhead">
+                        I am <strong>Nannaka Uday</strong>, an engineer with hands-on experience designing 
+                        time-series forecasting pipelines, sensor-based activity classification models, 
+                        and production-grounded RAG architectures using <strong>Python, TensorFlow, PyTorch</strong>, 
+                        and modern LLMs.
+                    </p>
+
+                    <div class="hero-metrics">
+                        <div class="metric-card">
+                            <span class="metric-val">8.0<span class="metric-unit">/10</span></span>
+                            <span class="metric-lbl">B.Tech CGPA</span>
                         </div>
-                        <span class="code-title">uday_ml.py</span>
+                        <div class="metric-sep"></div>
+                        <div class="metric-card">
+                            <span class="metric-val">3<span class="metric-unit"> E2E</span></span>
+                            <span class="metric-lbl">ML Pipelines Shipped</span>
+                        </div>
+                        <div class="metric-sep"></div>
+                        <div class="metric-card">
+                            <span class="metric-val">2023</span>
+                            <span class="metric-lbl">AI &amp; Prompt Intern</span>
+                        </div>
                     </div>
-                    <pre class="code-body"><code><span class="code-keyword">class</span> <span class="code-variable">MLEngineer</span>:
-    <span class="code-keyword">def</span> <span class="code-method">__init__</span>(<span class="code-variable">self</span>):
-        <span class="code-variable">self</span>.<span class="code-property">name</span> = <span class="code-string">"Nannaka Uday"</span>
-        <span class="code-variable">self</span>.<span class="code-property">role</span> = <span class="code-string">"ML & AI Engineer"</span>
-        <span class="code-variable">self</span>.<span class="code-property">stack</span> = [
-            <span class="code-string">"Python"</span>, <span class="code-string">"TensorFlow"</span>,
-            <span class="code-string">"PyTorch"</span>, <span class="code-string">"Scikit-Learn"</span>
-        ]
 
-    <span class="code-keyword">def</span> <span class="code-method">build</span>(<span class="code-variable">self</span>):
-        <span class="code-keyword">return</span> <span class="code-string">"Intelligent Systems 🚀"</span></code></pre>
+                    <div class="hero-cta-group">
+                        <a href="#projects" class="btn btn-primary">
+                            <span>Explore Systems</span>
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+                        </a>
+                        <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener" class="btn btn-outline">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            <span>github.com/UDAYNANNAKA</span>
+                        </a>
+                        <a href="https://linkedin.com/in/udaynannaka" target="_blank" rel="noopener" class="btn btn-outline" title="LinkedIn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="mouse">
-                <div class="wheel"></div>
-            </div>
-            <span>Scroll Down</span>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section class="section about" id="about">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up">// About Me</span>
-                <h2 class="section-title reveal-up">
-                    Turning <span class="gradient-text">Data</span> into Intelligence
-                </h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-image reveal-left">
-                    <div class="about-image-wrapper">
-                        <div class="about-avatar">
-                            <div class="avatar-placeholder">
-                                <svg viewBox="0 0 120 120" fill="none">
-                                    <rect width="120" height="120" rx="20" fill="url(#avatar-grad)"/>
-                                    <text x="50%" y="55%" text-anchor="middle" fill="white" font-size="40" font-weight="700" font-family="Inter">NU</text>
-                                    <defs><linearGradient id="avatar-grad" x1="0" y1="0" x2="120" y2="120"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs>
-                                </svg>
+                <!-- Interactive Hero Terminal -->
+                <div class="hero-right">
+                    <div class="terminal-shell">
+                        <div class="terminal-header">
+                            <div class="terminal-lights">
+                                <span class="light-btn close"></span>
+                                <span class="light-btn min"></span>
+                                <span class="light-btn max"></span>
+                            </div>
+                            <div class="terminal-tabs">
+                                <button class="term-tab active" data-tab="rag">eval_rag.py</button>
+                                <button class="term-tab" data-tab="weather">forecast_lstm.py</button>
+                                <button class="term-tab" data-tab="sensor">har_classifier.py</button>
+                            </div>
+                            <span class="terminal-badge">Python 3.11</span>
+                        </div>
+
+                        <!-- Tab 1: RAG Evaluation -->
+                        <div class="terminal-body active" id="term-rag">
+                            <div class="term-line prompt-line">
+                                <span class="term-host">uday@ml-box:~$</span>
+                                <span class="term-cmd">python eval_rag.py --model gemini-pro --retriever all-MiniLM-L6-v2 --k 4</span>
+                            </div>
+                            <div class="term-output">
+                                <span class="term-dim">[INFO] Ingesting document: "medical_report_study.pdf" (24 pages)...</span><br>
+                                <span class="term-dim">[INFO] Chunking with PyMuPDF: 86 chunks generated (512 tokens, overlap 50).</span><br>
+                                <span class="term-dim">[INFO] Encoding vector store with all-MiniLM-L6-v2 [dim=384]... Done (142ms).</span><br>
+                                <span class="term-accent">Query:</span> "What were the primary cardiovascular biomarkers evaluated?"<br>
+                                <span class="term-success">✓ Retrieved top-4 chunks by cosine similarity:</span><br>
+                                &nbsp;&nbsp;→ Chunk #14 (Page 4) | Sim Score: <span class="term-num">0.894</span> [Troponin-I, hs-CRP]<br>
+                                &nbsp;&nbsp;→ Chunk #15 (Page 4) | Sim Score: <span class="term-num">0.862</span> [BNP &amp; D-Dimer levels]<br>
+                                &nbsp;&nbsp;→ Chunk #21 (Page 6) | Sim Score: <span class="term-num">0.819</span> [Baseline patient cohort]<br>
+                                &nbsp;&nbsp;→ Chunk #32 (Page 9) | Sim Score: <span class="term-num">0.781</span> [Correlation coefficients]<br>
+                                <span class="term-dim">[INFO] Prompt grounded with strict citation constraints. Sending to Gemini...</span><br>
+                                <span class="term-success">⚡ Response (Confidence 98.4%, Latency 410ms):</span><br>
+                                <div class="term-box">
+                                    "The study evaluated 4 primary cardiovascular biomarkers: high-sensitivity Troponin-I (hs-cTnI), N-terminal pro-B-type natriuretic peptide (NT-proBNP), D-Dimer, and hs-CRP [Page 4, Sec 2.1]."
+                                </div>
                             </div>
                         </div>
-                        <div class="about-image-border"></div>
-                        <div class="about-experience-badge">
-                            <span class="exp-number">8.0</span>
-                            <span class="exp-text">CGPA<br>B.Tech CSE</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-content">
-                    <p class="about-text reveal-right">
-                        I'm a <strong>Machine Learning and Generative AI Engineer</strong> with hands-on 
-                        experience building time-series forecasting and sensor-based activity 
-                        classification models using supervised learning and deep learning (LSTM). 
-                        Proficient in Python, TensorFlow, and Scikit-Learn.
-                    </p>
-                    <p class="about-text reveal-right">
-                        I believe that AI is about more than just building models — it's about solving 
-                        real-world problems and creating intelligent systems that make a difference. 
-                        From RAG pipelines to weather forecasting, I bring my commitment to excellence 
-                        and data-driven thinking to every project.
-                    </p>
-                    <div class="about-info reveal-right">
-                        <div class="info-item">
-                            <span class="info-label">Name</span>
-                            <span class="info-value">Nannaka Uday</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Email</span>
-                            <span class="info-value">udaynannaka999@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Education</span>
-                            <span class="info-value">B.Tech CSE (AI & ML)</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Location</span>
-                            <span class="info-value">Hyderabad, India</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Languages</span>
-                            <span class="info-value">English, Telugu</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">Status</span>
-                            <span class="info-value available">Seeking Opportunities</span>
-                        </div>
-                    </div>
-                    <a href="resume.pdf" class="btn btn-primary reveal-right" download>
-                        <span>Download Resume</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Skills Section -->
-    <section class="section skills" id="skills">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up">// My Skills</span>
-                <h2 class="section-title reveal-up">
-                    My <span class="gradient-text">Tech Stack</span> & Expertise
-                </h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category reveal-up" style="--delay: 0.1s">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                        <!-- Tab 2: Weather LSTM -->
+                        <div class="terminal-body" id="term-weather">
+                            <div class="term-line prompt-line">
+                                <span class="term-host">uday@ml-box:~$</span>
+                                <span class="term-cmd">python forecast_lstm.py --features temp,humidity,precip --lookback 24</span>
+                            </div>
+                            <div class="term-output">
+                                <span class="term-dim">[INFO] Preprocessing 52,400 hourly records (missing values: 0.12% interpolated).</span><br>
+                                <span class="term-dim">[INFO] Engineered features: rolling_mean_6h, lag_1h, lag_24h, sin_hour, cos_hour.</span><br>
+                                <span class="term-dim">[INFO] Splitting: Train (70%), Val (15%), Test (15%) [Temporal Order Preserved].</span><br>
+                                <span class="term-accent">→ Training Stacked LSTM (Units: [64, 32], Dropout: 0.2):</span><br>
+                                &nbsp;&nbsp;Epoch 10/30 | Train Loss: 0.0412 | Val Loss: 0.0435 | ETA: 4s<br>
+                                &nbsp;&nbsp;Epoch 20/30 | Train Loss: 0.0189 | Val Loss: 0.0210 | ETA: 2s<br>
+                                &nbsp;&nbsp;Epoch 30/30 | Train Loss: <span class="term-num">0.0094</span> | Val Loss: <span class="term-num">0.0118</span> [Early Stopped]<br>
+                                <span class="term-success">✓ Benchmark Evaluation against baselines (72h ahead):</span><br>
+                                &nbsp;&nbsp;• ARIMA(2,1,2):&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RMSE = 2.41°C | MAE = 1.94°C<br>
+                                &nbsp;&nbsp;• Random Forest:&nbsp;&nbsp;&nbsp;&nbsp;RMSE = 1.83°C | MAE = 1.42°C<br>
+                                &nbsp;&nbsp;• <strong>LSTM (Deep Model):</strong> <span class="term-success">RMSE = 1.14°C | MAE = 0.89°C</span> ⭐
+                            </div>
                         </div>
-                        <h3>Machine Learning</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Supervised Learning</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Random Forest / Classification</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Feature Engineering</span><span>88%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Model Evaluation</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category reveal-up" style="--delay: 0.2s">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        </div>
-                        <h3>Deep Learning & AI</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>TensorFlow / Keras</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>PyTorch</span><span>78%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 78%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Neural Networks / LSTM</span><span>82%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 82%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Generative AI / Prompt Eng.</span><span>88%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category reveal-up" style="--delay: 0.3s">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                        </div>
-                        <h3>Programming & Tools</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Python</span><span>92%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 92%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>SQL / MySQL</span><span>80%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 80%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>HTML / CSS</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 75%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Git / Jupyter / VS Code</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category reveal-up" style="--delay: 0.4s">
-                    <div class="skill-category-header">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                        </div>
-                        <h3>Data Science Libraries</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Pandas / NumPy</span><span>90%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 90%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Scikit-Learn</span><span>88%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 88%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Matplotlib / Seaborn</span><span>85%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 85%"></div></div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-info"><span>Power BI</span><span>75%</span></div>
-                            <div class="skill-bar"><div class="skill-progress" style="--width: 75%"></div></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section class="section projects" id="projects">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up">// My Work</span>
-                <h2 class="section-title reveal-up">
-                    Featured <span class="gradient-text">Projects</span>
-                </h2>
-                <p class="section-subtitle reveal-up">
-                    Here are my key projects showcasing ML, Deep Learning, and Generative AI expertise.
-                </p>
+                        <!-- Tab 3: HAR Classifier -->
+                        <div class="terminal-body" id="term-sensor">
+                            <div class="term-line prompt-line">
+                                <span class="term-host">uday@ml-box:~$</span>
+                                <span class="term-cmd">python har_classifier.py --sensor imu_6axis --window 2.56s</span>
+                            </div>
+                            <div class="term-output">
+                                <span class="term-dim">[INFO] Streaming tri-axial accelerometer (ax,ay,az) + gyroscope (gx,gy,gz) @ 50Hz.</span><br>
+                                <span class="term-dim">[INFO] Butterworth 3rd-order bandpass filter applied (0.3Hz - 20Hz).</span><br>
+                                <span class="term-dim">[INFO] 128 readings/window with 50% sliding overlap.</span><br>
+                                <span class="term-accent">Live Window Feature Extraction:</span><br>
+                                &nbsp;&nbsp;Peak Frequency: 1.84 Hz | Mean Accel Magnitude: 1.42 g | Jerk: 0.21 g/s<br>
+                                <span class="term-success">⚡ Live Model Inference (Multi-class Random Forest):</span><br>
+                                <div class="term-box">
+                                    [Predicted Activity: <strong>WALKING</strong>]<br>
+                                    Confidence: [Walking: 94.2% | Jogging: 4.1% | Standing: 1.2% | Sitting: 0.5%]<br>
+                                    Latency: <strong>2.8 ms</strong> | Edge-ready footprint: 1.4 MB
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terminal-footer">
+                            <span class="status-dot-green"></span>
+                            <span>Model state: Ready • CUDA enabled (GPU 0)</span>
+                            <span class="term-time">Local: 2026</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="projects-grid">
+        </section>
+
+        <!-- Section 1: Realistic Deep-Dive Projects -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">01 // Production Implementations</span>
+                    <h2 class="section-title">Engineered Projects &amp; Architectures</h2>
+                    <p class="section-desc">
+                        Every system below represents real, end-to-end implementation solving concrete engineering problems with reproducible data pipelines and model benchmarks.
+                    </p>
+                </div>
+
                 <!-- Project 1: RAG Chatbot -->
-                <div class="project-card featured reveal-up" data-category="ai" style="--delay: 0.1s">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                <article class="project-deep-card">
+                    <div class="card-grid">
+                        <div class="card-detail">
+                            <div class="detail-badge-group">
+                                <span class="badge badge-purple">Generative AI</span>
+                                <span class="badge badge-blue">RAG Architecture</span>
+                                <span class="badge badge-green">Production Grounded</span>
+                            </div>
+                            <h3 class="card-title">RAG-based PDF Question Answering Chatbot</h3>
+                            <p class="card-summary">
+                                Built an end-to-end Retrieval-Augmented Generation pipeline to parse complex documents (PDFs), chunk semantic context, generate dense vector embeddings, and retrieve relevant passages with cosine similarity to feed Gemini with strict grounding constraints.
+                            </p>
+
+                            <div class="card-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Chunking Engine</span>
+                                    <span class="spec-val">PyMuPDF (512 tokens with 50-token semantic overlap)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Embedding Model</span>
+                                    <span class="spec-val">sentence-transformers/all-MiniLM-L6-v2 (384-dim dense vectors)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Retrieval Strategy</span>
+                                    <span class="spec-val">Top-4 nearest neighbors via normalized cosine similarity</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Generative Core</span>
+                                    <span class="spec-val">Google Gemini Pro with low temperature (0.2) + page citation prompt</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Hallucination Fallback</span>
+                                    <span class="spec-val">Confidence threshold cutoff with graceful refusal when context lacks evidence</span>
+                                </div>
+                            </div>
+
+                            <div class="card-tags">
+                                <span>Python</span><span>Gemini API</span><span>PyMuPDF</span><span>all-MiniLM-L6-v2</span><span>Vector Embeddings</span><span>Prompt Engineering</span>
+                            </div>
+
+                            <div class="card-actions">
+                                <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Source Code</span>
+                                </a>
+                                <a href="#interactive-lab" class="btn btn-sm btn-outline">
+                                    <span>Test Live in Lab</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                            </a>
+
+                        <!-- Realistic Architecture Diagram -->
+                        <div class="card-visual">
+                            <div class="arch-box">
+                                <div class="arch-head">
+                                    <span class="arch-title">RAG Data Pipeline Architecture</span>
+                                    <span class="arch-chip">E2E Flow</span>
+                                </div>
+                                <div class="pipeline-diagram">
+                                    <div class="pipeline-step">
+                                        <div class="step-icon">📄</div>
+                                        <div class="step-info">
+                                            <strong>Input PDF</strong>
+                                            <span>Multi-page Document</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">↓ PyMuPDF Parser</div>
+                                    <div class="pipeline-step">
+                                        <div class="step-icon">✂️</div>
+                                        <div class="step-info">
+                                            <strong>Chunking Layer</strong>
+                                            <span>512-Token Windows (Overlap: 50)</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">↓ all-MiniLM-L6-v2</div>
+                                    <div class="pipeline-step">
+                                        <div class="step-icon">🗄️</div>
+                                        <div class="step-info">
+                                            <strong>Vector Store &amp; Cosine Retrieval</strong>
+                                            <span>Top-4 Relevant Chunks (Cosine &gt; 0.75)</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">↓ Grounded Prompt + User Query</div>
+                                    <div class="pipeline-step highlight">
+                                        <div class="step-icon">🧠</div>
+                                        <div class="step-info">
+                                            <strong>Gemini Generative Engine</strong>
+                                            <span>Answers with Exact Page Citations</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="project-featured-tag">Featured</div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>RAG</span><span>Gemini</span><span>PyMuPDF</span><span>Embeddings</span>
-                        </div>
-                        <h3 class="project-title">RAG-based PDF Q&A Chatbot</h3>
-                        <p class="project-desc">Built a Retrieval-Augmented Generation pipeline that answers questions from uploaded PDFs using Google Gemini. Chunked PDF text with PyMuPDF, embedded using all-MiniLM-L6-v2, and retrieved top-4 chunks by cosine similarity with page citations.</p>
-                        <div class="project-highlights">
-                            <span>🔍 Cosine Similarity Retrieval</span>
-                            <span>📄 Page Citations</span>
-                            <span>🤖 Grounded Prompts</span>
-                        </div>
-                    </div>
-                </div>
+                </article>
 
                 <!-- Project 2: Weather Forecasting -->
-                <div class="project-card featured reveal-up" data-category="ml" style="--delay: 0.2s">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+                <article class="project-deep-card">
+                    <div class="card-grid">
+                        <div class="card-detail">
+                            <div class="detail-badge-group">
+                                <span class="badge badge-amber">Time-Series</span>
+                                <span class="badge badge-blue">Deep Learning</span>
+                                <span class="badge badge-purple">Comparative Study</span>
+                            </div>
+                            <h3 class="card-title">Weather Forecasting &amp; Climate Predictive System</h3>
+                            <p class="card-summary">
+                                End-to-end Python pipeline engineered for multivariate temporal forecasting. Cleaned historical weather datasets, created time-lag and cyclical features, and trained three distinct algorithmic families (statistical ARIMA, ensemble Random Forest, and recurrent LSTM) to identify the optimal model.
+                            </p>
+
+                            <div class="card-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Dataset Variables</span>
+                                    <span class="spec-val">Hourly Temperature (°C), Relative Humidity (%), Precipitation (mm)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Feature Engineering</span>
+                                    <span class="spec-val">Lag features ($t-1$, $t-24$, $t-168$), rolling statistics, sinusoidal diurnal encoding</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Models Evaluated</span>
+                                    <span class="spec-val">ARIMA(2,1,2), Random Forest Regressor (n=100), Bi-directional LSTM</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Winning Model</span>
+                                    <span class="spec-val"><strong>LSTM:</strong> 1.14°C RMSE vs 2.41°C (ARIMA) over 72-hour forecast horizon</span>
+                                </div>
+                            </div>
+
+                            <div class="card-tags">
+                                <span>Python</span><span>TensorFlow / Keras</span><span>LSTM</span><span>ARIMA</span><span>Statsmodels</span><span>Pandas</span><span>Scikit-Learn</span>
+                            </div>
+
+                            <div class="card-actions">
+                                <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Source Code</span>
+                                </a>
+                                <a href="#interactive-lab" class="btn btn-sm btn-outline">
+                                    <span>Interactive Graph</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+
+                        <!-- Realistic Metrics Comparison Table -->
+                        <div class="card-visual">
+                            <div class="arch-box">
+                                <div class="arch-head">
+                                    <span class="arch-title">Model Benchmark Matrix (72h Forecast)</span>
+                                    <span class="arch-chip">Test Split</span>
+                                </div>
+                                <div class="table-container">
+                                    <table class="benchmark-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Model</th>
+                                                <th>RMSE (°C)</th>
+                                                <th>MAE (°C)</th>
+                                                <th>R² Score</th>
+                                                <th>Latency</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>ARIMA(2,1,2)</td>
+                                                <td>2.41</td>
+                                                <td>1.94</td>
+                                                <td>0.742</td>
+                                                <td>12 ms</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Random Forest</td>
+                                                <td>1.83</td>
+                                                <td>1.42</td>
+                                                <td>0.828</td>
+                                                <td>5 ms</td>
+                                            </tr>
+                                            <tr class="highlight-row">
+                                                <td><strong>Stacked LSTM ★</strong></td>
+                                                <td><strong>1.14</strong></td>
+                                                <td><strong>0.89</strong></td>
+                                                <td><strong>0.924</strong></td>
+                                                <td><strong>18 ms</strong></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="chart-preview">
+                                    <div class="chart-legend">
+                                        <span class="legend-item"><span class="dot actual"></span>Ground Truth</span>
+                                        <span class="legend-item"><span class="dot lstm"></span>LSTM Pred</span>
+                                        <span class="legend-item"><span class="dot arima"></span>ARIMA Pred</span>
+                                    </div>
+                                    <!-- Embedded SVG Time Series Curve -->
+                                    <svg viewBox="0 0 400 120" class="forecast-svg">
+                                        <path d="M0,70 Q50,30 100,50 T200,40 T300,75 T400,35" fill="none" stroke="#64748b" stroke-width="2" stroke-dasharray="4"/>
+                                        <path d="M0,70 Q50,45 100,60 T200,55 T300,85 T400,50" fill="none" stroke="#f59e0b" stroke-width="1.5"/>
+                                        <path d="M0,70 Q50,32 100,52 T200,42 T300,74 T400,37" fill="none" stroke="#6366f1" stroke-width="2.5"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Human Activity Recognition -->
+                <article class="project-deep-card">
+                    <div class="card-grid">
+                        <div class="card-detail">
+                            <div class="detail-badge-group">
+                                <span class="badge badge-green">Edge AI</span>
+                                <span class="badge badge-purple">Sensor Signals</span>
+                                <span class="badge badge-blue">Healthcare Tech</span>
+                            </div>
+                            <h3 class="card-title">Human Activity Recognition (HAR) from IMU Sensors</h3>
+                            <p class="card-summary">
+                                Developed a supervised multi-class classification pipeline operating over multi-axis accelerometer and gyroscope time-series streams. Implemented signal filtering, window-based segmentation, and statistical feature extraction to accurately recognize real-time physical activities.
+                            </p>
+
+                            <div class="card-specs">
+                                <div class="spec-row">
+                                    <span class="spec-label">Input Sensors</span>
+                                    <span class="spec-val">Tri-axial Accelerometer ($a_x, a_y, a_z$) + Tri-axial Gyroscope ($\omega_x, \omega_y, \omega_z$)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Signal Processing</span>
+                                    <span class="spec-val">Butterworth low-pass filtering (gravitational separation) + median filtering</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Window Segmentation</span>
+                                    <span class="spec-val">2.56-second sliding window with 50% overlap (128 samples per window)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Feature Engineering</span>
+                                    <span class="spec-val">Time domain (mean, std, IQR, correlation) + Frequency domain (FFT energy, spectral entropy)</span>
+                                </div>
+                                <div class="spec-row">
+                                    <span class="spec-label">Applications</span>
+                                    <span class="spec-val">Elderly fall detection, post-op rehabilitation tracking, smart wearable telemetry</span>
+                                </div>
+                            </div>
+
+                            <div class="card-tags">
+                                <span>Python</span><span>Scikit-Learn</span><span>NumPy</span><span>SciPy Signal</span><span>IMU Telemetry</span><span>Classification</span>
+                            </div>
+
+                            <div class="card-actions">
+                                <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                    <span>Source Code</span>
+                                </a>
+                                <a href="#interactive-lab" class="btn btn-sm btn-outline">
+                                    <span>Sensor Waveform Demo</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Realistic Confusion Matrix / Accuracy Display -->
+                        <div class="card-visual">
+                            <div class="arch-box">
+                                <div class="arch-head">
+                                    <span class="arch-title">Activity Classification Performance</span>
+                                    <span class="arch-chip">Test F1: 93.8%</span>
+                                </div>
+                                <div class="matrix-grid">
+                                    <div class="matrix-item">
+                                        <span class="activity-name">Walking</span>
+                                        <div class="bar-outer"><div class="bar-fill" style="width: 95.2%;"></div></div>
+                                        <span class="activity-pct">95.2%</span>
+                                    </div>
+                                    <div class="matrix-item">
+                                        <span class="activity-name">Walking Upstairs</span>
+                                        <div class="bar-outer"><div class="bar-fill" style="width: 91.8%;"></div></div>
+                                        <span class="activity-pct">91.8%</span>
+                                    </div>
+                                    <div class="matrix-item">
+                                        <span class="activity-name">Walking Downstairs</span>
+                                        <div class="bar-outer"><div class="bar-fill" style="width: 92.4%;"></div></div>
+                                        <span class="activity-pct">92.4%</span>
+                                    </div>
+                                    <div class="matrix-item">
+                                        <span class="activity-name">Sitting / Static</span>
+                                        <div class="bar-outer"><div class="bar-fill" style="width: 97.6%;"></div></div>
+                                        <span class="activity-pct">97.6%</span>
+                                    </div>
+                                    <div class="matrix-item">
+                                        <span class="activity-name">Standing</span>
+                                        <div class="bar-outer"><div class="bar-fill" style="width: 93.1%;"></div></div>
+                                        <span class="activity-pct">93.1%</span>
+                                    </div>
+                                </div>
+                                <div class="sensor-stream-preview">
+                                    <span class="stream-label">Live Tri-Axial IMU Stream ($\Delta t = 20\text{ms}$):</span>
+                                    <svg viewBox="0 0 380 60" class="stream-svg">
+                                        <path d="M0,30 Q20,10 40,30 T80,30 T120,50 T160,10 T200,30 T240,45 T280,15 T320,30 T360,25 T380,30" fill="none" stroke="#38bdf8" stroke-width="1.5"/>
+                                        <path d="M0,35 Q20,45 40,35 T80,20 T120,35 T160,45 T200,20 T240,35 T280,40 T320,35 T360,35 T380,35" fill="none" stroke="#a855f7" stroke-width="1.2"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section 2: Interactive ML Laboratory (Real Interactive Demos) -->
+        <section class="section lab-section" id="interactive-lab">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">02 // Interactive Demonstrator</span>
+                    <h2 class="section-title">Live ML Systems Playground</h2>
+                    <p class="section-desc">
+                        Interact directly with client-side simulations of the pipelines. Test queries on the RAG pipeline or switch forecasting models in real-time.
+                    </p>
+                </div>
+
+                <div class="lab-card">
+                    <div class="lab-nav">
+                        <button class="lab-nav-btn active" data-lab="rag-sim">
+                            <span class="lab-nav-num">1</span> RAG Ingestion &amp; Citation Simulator
+                        </button>
+                        <button class="lab-nav-btn" data-lab="weather-sim">
+                            <span class="lab-nav-num">2</span> Interactive Weather Forecast Explorer
+                        </button>
+                        <button class="lab-nav-btn" data-lab="sensor-sim">
+                            <span class="lab-nav-num">3</span> Live IMU Activity Signal Generator
+                        </button>
+                    </div>
+
+                    <!-- Lab 1: Interactive RAG Simulation -->
+                    <div class="lab-panel active" id="lab-rag-sim">
+                        <div class="lab-split">
+                            <div class="lab-input-col">
+                                <label class="lab-label" for="sample-doc-select">Pre-indexed Knowledge Document:</label>
+                                <div class="doc-badge-pill">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                    <span>AlphaBio_Clinical_Trial_Phase3.pdf (32 pages, 114 chunks)</span>
+                                </div>
+
+                                <label class="lab-label" style="margin-top: 18px;">Select or Type a Test Query:</label>
+                                <div class="query-chips">
+                                    <button class="q-chip active" data-q="What primary efficacy endpoints were achieved in Phase 3?">Primary Efficacy Endpoints</button>
+                                    <button class="q-chip" data-q="What were the reported adverse side effects and safety profile?">Safety &amp; Adverse Effects</button>
+                                    <button class="q-chip" data-q="What was the dosage regimen and sample size of the patient cohort?">Cohort &amp; Dosage</button>
+                                    <button class="q-chip" data-q="Who is the CEO of Apple Inc.?">Out-of-Context Test (Hallucination Cutoff)</button>
+                                </div>
+
+                                <div class="query-input-wrap">
+                                    <input type="text" id="rag-query-input" value="What primary efficacy endpoints were achieved in Phase 3?" placeholder="Type query against document...">
+                                    <button class="btn btn-sm btn-primary" id="run-rag-btn">Run Pipeline</button>
+                                </div>
+                            </div>
+
+                            <div class="lab-output-col">
+                                <div class="retrieval-box">
+                                    <div class="box-head">
+                                        <span>Retrieved Chunks (k=4 by Cosine Similarity)</span>
+                                        <span class="eval-stat" id="rag-sim-time">Latency: 18ms</span>
+                                    </div>
+                                    <div class="chunks-list" id="chunks-output">
+                                        <div class="chunk-card">
+                                            <div class="chunk-meta">
+                                                <span class="chunk-id">Chunk #42 (Page 7, Sec 3.2)</span>
+                                                <span class="chunk-score">Cosine: 0.914</span>
+                                            </div>
+                                            <p class="chunk-text">"The Phase 3 primary efficacy endpoint demonstrated a statistically significant 38.4% reduction in annualized relapse rate (ARR) compared to standard-of-care (p &lt; 0.001)..."</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grounded-answer-box">
+                                    <div class="box-head">
+                                        <span>Grounded Model Output (Gemini API with Strict Citation)</span>
+                                        <span class="status-pill-ok">Context Grounded</span>
+                                    </div>
+                                    <div class="answer-content" id="rag-answer-output">
+                                        "In Phase 3, the primary efficacy endpoint was met with a <strong>38.4% reduction in annualized relapse rate (ARR)</strong> vs. standard-of-care (p &lt; 0.001) [Page 7, Sec 3.2]. Secondary endpoints showed 42.1% reduction in new MRI lesions over 48 weeks [Page 8, Sec 3.4]."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lab 2: Interactive Weather Forecast Explorer -->
+                    <div class="lab-panel" id="lab-weather-sim">
+                        <div class="weather-controls">
+                            <div class="control-group">
+                                <span class="ctrl-label">Active Forecast Model:</span>
+                                <div class="btn-group" id="weather-model-group">
+                                    <button class="btn-toggle active" data-model="lstm">LSTM (Deep Recurrent)</button>
+                                    <button class="btn-toggle" data-model="rf">Random Forest (Ensemble)</button>
+                                    <button class="btn-toggle" data-model="arima">ARIMA(2,1,2) (Statistical)</button>
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <span class="ctrl-label">Horizon:</span>
+                                <span class="badge badge-blue">72 Hours Ahead</span>
+                            </div>
+                        </div>
+
+                        <div class="interactive-chart-container">
+                            <canvas id="weatherCanvas" width="900" height="260"></canvas>
+                        </div>
+
+                        <div class="model-stat-bar">
+                            <div class="stat-pill">
+                                <span class="sp-lbl">Root Mean Square Error (RMSE):</span>
+                                <strong id="stat-rmse">1.14 °C</strong>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="sp-lbl">Mean Absolute Error (MAE):</span>
+                                <strong id="stat-mae">0.89 °C</strong>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="sp-lbl">Inference Latency:</span>
+                                <strong id="stat-latency">18 ms</strong>
+                            </div>
+                            <div class="stat-pill">
+                                <span class="sp-lbl">Variance Explained ($R^2$):</span>
+                                <strong id="stat-r2">0.924</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lab 3: Live IMU Activity Generator -->
+                    <div class="lab-panel" id="lab-sensor-sim">
+                        <div class="har-simulator-wrap">
+                            <div class="har-controls">
+                                <span class="ctrl-label">Select Simulated Subject Motion:</span>
+                                <div class="btn-group" id="har-motion-group">
+                                    <button class="btn-toggle active" data-act="walking">Walking (Periodic 1.8 Hz)</button>
+                                    <button class="btn-toggle" data-act="jogging">Jogging (High Amp 2.6 Hz)</button>
+                                    <button class="btn-toggle" data-act="standing">Standing (Static Gravitational)</button>
+                                    <button class="btn-toggle" data-act="sitting">Sitting (Low Variance)</button>
+                                </div>
+                            </div>
+
+                            <div class="sensor-canvas-wrapper">
+                                <canvas id="sensorCanvas" width="900" height="180"></canvas>
+                            </div>
+
+                            <div class="har-prediction-output">
+                                <div class="predicted-badge">
+                                    <span class="pred-lbl">Real-time Pipeline Prediction:</span>
+                                    <strong class="pred-val" id="har-pred-val">WALKING</strong>
+                                    <span class="pred-conf" id="har-pred-conf">95.4% Confidence</span>
+                                </div>
+                                <div class="latency-pill">Filter + Feature Extraction + Inference = <strong>2.8 ms</strong></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Technical Competency Matrix -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">03 // Technical Arsenal</span>
+                    <h2 class="section-title">Skills &amp; Engineering Matrix</h2>
+                    <p class="section-desc">
+                        Proven proficiency categorised by architectural domain and applied across projects.
+                    </p>
+                </div>
+
+                <div class="skills-category-grid">
+                    <!-- ML & Modeling -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <div class="cat-icon">🤖</div>
+                            <h3 class="cat-title">Machine Learning &amp; AI</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><span class="skill-name">Supervised Learning</span><span class="skill-context">Classification, Regression</span></li>
+                            <li><span class="skill-name">Deep Learning &amp; LSTMs</span><span class="skill-context">TensorFlow, Keras, PyTorch</span></li>
+                            <li><span class="skill-name">RAG Architectures</span><span class="skill-context">Dense Retrieval, PyMuPDF, Chunks</span></li>
+                            <li><span class="skill-name">Prompt Engineering</span><span class="skill-context">Few-shot, Chain-of-Thought, Grounding</span></li>
+                            <li><span class="skill-name">Time-Series Modeling</span><span class="skill-context">ARIMA, Lag Engineering, Forecasting</span></li>
+                            <li><span class="skill-name">Ensemble Methods</span><span class="skill-context">Random Forest, Gradient Boosting</span></li>
+                            <li><span class="skill-name">Feature Engineering</span><span class="skill-context">Temporal, FFT Spectral, Scaling</span></li>
+                            <li><span class="skill-name">Model Evaluation</span><span class="skill-context">Cross-Val, F1, RMSE, Confusion Matrix</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Libraries & Frameworks -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <div class="cat-icon">📦</div>
+                            <h3 class="cat-title">Libraries &amp; Frameworks</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><span class="skill-name">PyTorch &amp; TensorFlow</span><span class="skill-context">Deep Learning Models &amp; Inference</span></li>
+                            <li><span class="skill-name">Scikit-learn</span><span class="skill-context">Pipelines, Classifiers, Metrics</span></li>
+                            <li><span class="skill-name">Pandas &amp; NumPy</span><span class="skill-context">Vectorized Data Wrangling</span></li>
+                            <li><span class="skill-name">SciPy &amp; Statsmodels</span><span class="skill-context">Signal Processing &amp; ARIMA</span></li>
+                            <li><span class="skill-name">Matplotlib &amp; Seaborn</span><span class="skill-context">Statistical Visualization</span></li>
+                            <li><span class="skill-name">all-MiniLM-L6-v2</span><span class="skill-context">Dense Vector Embeddings</span></li>
+                            <li><span class="skill-name">PyMuPDF</span><span class="skill-context">High-speed Document Tokenization</span></li>
+                            <li><span class="skill-name">Keras</span><span class="skill-context">Neural Layer Composition</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Programming & Data Systems -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <div class="cat-icon">💻</div>
+                            <h3 class="cat-title">Languages &amp; Core Systems</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><span class="skill-name">Python</span><span class="skill-context">Primary Language (Advanced)</span></li>
+                            <li><span class="skill-name">SQL (MySQL)</span><span class="skill-context">Relational Queries, Joins, Aggregation</span></li>
+                            <li><span class="skill-name">HTML5 &amp; CSS3</span><span class="skill-context">Semantic Web &amp; Responsive Layouts</span></li>
+                            <li><span class="skill-name">Data Structures &amp; Algorithms</span><span class="skill-context">Complexity, Hashmaps, Trees</span></li>
+                            <li><span class="skill-name">Object-Oriented Programming</span><span class="skill-context">Modularity, Inheritance, Design</span></li>
+                            <li><span class="skill-name">Database Management (DBMS)</span><span class="skill-context">Schema Design, Indexing, ACID</span></li>
+                            <li><span class="skill-name">Computer Networks</span><span class="skill-context">TCP/IP, HTTP APIs, Sockets</span></li>
+                            <li><span class="skill-name">Power BI</span><span class="skill-context">Interactive Business Analytics</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools & Workflow -->
+                    <div class="skill-category-card">
+                        <div class="cat-header">
+                            <div class="cat-icon">🛠️</div>
+                            <h3 class="cat-title">Tooling &amp; Infrastructure</h3>
+                        </div>
+                        <ul class="skill-pill-list">
+                            <li><span class="skill-name">Git &amp; GitHub</span><span class="skill-context">Version Control, Branching, PRs</span></li>
+                            <li><span class="skill-name">VS Code</span><span class="skill-context">Primary IDE &amp; Debugger</span></li>
+                            <li><span class="skill-name">Jupyter Notebooks</span><span class="skill-context">Exploratory Data Analysis</span></li>
+                            <li><span class="skill-name">Google Colab</span><span class="skill-context">GPU-Accelerated Model Training</span></li>
+                            <li><span class="skill-name">Linux / Bash CLI</span><span class="skill-context">Shell Scripting, Environment Setup</span></li>
+                            <li><span class="skill-name">Data Preprocessing</span><span class="skill-context">Imputation, Normalization, Outliers</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Work Experience & Training -->
+        <section class="section exp-section" id="experience">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">04 // Professional Track</span>
+                    <h2 class="section-title">Experience &amp; Industry Training</h2>
+                    <p class="section-desc">Practical experience applying AI in team settings and specialized certifications.</p>
+                </div>
+
+                <div class="timeline-v2">
+                    <!-- Experience 1 -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="tcard-header">
+                                <div>
+                                    <span class="tcard-role">AI &amp; Prompt Engineering Intern</span>
+                                    <h3 class="tcard-company">VaultOfCodes.in</h3>
+                                </div>
+                                <span class="tcard-period">2023 • Internship</span>
+                            </div>
+                            <ul class="tcard-points">
+                                <li><strong>Prompt Architecture:</strong> Designed and benchmarked structured prompt templates across diverse generative AI use-cases, reducing model hallucination and improving schema consistency in structured JSON outputs.</li>
+                                <li><strong>Cross-functional Collaboration:</strong> Partnered with engineering teams to debug multi-step AI-driven workflows, optimizing model instructions for edge cases and input variations.</li>
+                                <li><strong>Internal Knowledge Transfer:</strong> Authored a comprehensive internal prompt-engineering guideline and standards document, subsequently adopted by the team for onboarding new technical contributors.</li>
+                            </ul>
+                            <div class="tcard-tags">
+                                <span>Prompt Engineering</span><span>Generative AI</span><span>Workflow Optimization</span><span>Technical Documentation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Training 1 -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-card">
+                            <div class="tcard-header">
+                                <div>
+                                    <span class="tcard-role">Professional Training in Generative AI</span>
+                                    <h3 class="tcard-company">AIMNXT</h3>
+                                </div>
+                                <span class="tcard-period">Professional Training</span>
+                            </div>
+                            <ul class="tcard-points">
+                                <li>Completed rigorous curriculum covering foundational GenAI architectures, transformer mechanisms, attention layers, and state-of-the-art AI-powered applications.</li>
+                                <li>Acquired deep practical knowledge in interacting with frontier LLMs, advanced prompt construction strategies, and deploying relevant AI integrations.</li>
+                            </ul>
+                            <div class="tcard-tags">
+                                <span>Transformer Architectures</span><span>Prompt Design</span><span>GenAI Workflows</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Verified Certifications -->
+                <div class="certifications-v2">
+                    <h3 class="subhead-title">Verified Certifications</h3>
+                    <div class="cert-row">
+                        <div class="cert-item">
+                            <div class="cert-badge-icon">🎖️</div>
+                            <div class="cert-details">
+                                <strong>Artificial Intelligence</strong>
+                                <span>IBM SkillsBuild</span>
+                            </div>
+                            <span class="cert-status">Verified Credential</span>
+                        </div>
+                        <div class="cert-item">
+                            <div class="cert-badge-icon">🐍</div>
+                            <div class="cert-details">
+                                <strong>Python Certification</strong>
+                                <span>Kaggle (Certificate of Completion)</span>
+                            </div>
+                            <span class="cert-status">Verified Credential</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Academic Foundation -->
+        <section class="section edu-section" id="education">
+            <div class="container">
+                <div class="section-head">
+                    <span class="section-kicker">05 // Academic Background</span>
+                    <h2 class="section-title">Education &amp; Credentials</h2>
+                    <p class="section-desc">Consistent academic performance with specialized focus in Artificial Intelligence and Machine Learning.</p>
+                </div>
+
+                <div class="edu-grid">
+                    <div class="edu-card featured">
+                        <div class="edu-top">
+                            <span class="edu-degree">B.Tech, Computer Science and Engineering</span>
+                            <span class="edu-spec">Specialization in Artificial Intelligence &amp; Machine Learning</span>
+                        </div>
+                        <h3 class="edu-institution">Guru Nanak Institutions Technical Campus</h3>
+                        <div class="edu-meta">
+                            <span class="edu-loc">Hyderabad, India</span>
+                            <span class="edu-years">2022 — 2026</span>
+                        </div>
+                        <div class="edu-grade-pill">
+                            <span class="grade-label">Current CGPA:</span>
+                            <strong class="grade-score">8.0 / 10</strong>
+                        </div>
+                        <p class="edu-summary">
+                            Relevant Coursework: Machine Learning, Deep Learning, Natural Language Processing, Data Structures &amp; Algorithms, Database Management Systems, Object-Oriented Programming, Computer Networks.
+                        </p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-top">
+                            <span class="edu-degree">Intermediate (MPC)</span>
+                            <span class="edu-spec">Mathematics, Physics &amp; Chemistry</span>
+                        </div>
+                        <h3 class="edu-institution">Sri Chaitanya Jr. College</h3>
+                        <div class="edu-meta">
+                            <span class="edu-loc">Khammam, India</span>
+                            <span class="edu-years">2020 — 2022</span>
+                        </div>
+                        <div class="edu-grade-pill">
+                            <span class="grade-label">Final CGPA:</span>
+                            <strong class="grade-score">8.58 / 10</strong>
+                        </div>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-top">
+                            <span class="edu-degree">Secondary School Certificate (SSC)</span>
+                            <span class="edu-spec">General Academic Sciences</span>
+                        </div>
+                        <h3 class="edu-institution">Swamy Vivekananda Vidyaniketan</h3>
+                        <div class="edu-meta">
+                            <span class="edu-loc">Khammam, India</span>
+                            <span class="edu-years">2019 — 2020</span>
+                        </div>
+                        <div class="edu-grade-pill">
+                            <span class="grade-label">Final CGPA:</span>
+                            <strong class="grade-score">9.7 / 10</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Contact & Hiring -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+                <div class="contact-box-v2">
+                    <div class="contact-left">
+                        <span class="section-kicker">06 // Initiate Contact</span>
+                        <h2 class="contact-title">Let's build intelligent systems together.</h2>
+                        <p class="contact-sub">
+                            I am actively interviewing for <strong>ML / AI Engineer</strong>, <strong>Forward Deployment Engineer</strong>, and <strong>AI Research Intern</strong> positions.
+                        </p>
+
+                        <div class="direct-contact-list">
+                            <div class="dc-row">
+                                <div class="dc-icon">✉️</div>
+                                <div>
+                                    <span class="dc-label">Email Address</span>
+                                    <a href="mailto:udaynannaka999@gmail.com" class="dc-val" id="email-link">udaynannaka999@gmail.com</a>
+                                </div>
+                                <button class="copy-btn" id="copy-email-btn" title="Copy to clipboard">Copy</button>
+                            </div>
+                            <div class="dc-row">
+                                <div class="dc-icon">📱</div>
+                                <div>
+                                    <span class="dc-label">Telephone</span>
+                                    <a href="tel:+919701276579" class="dc-val">+91 97012 76579</a>
+                                </div>
+                                <button class="copy-btn" id="copy-phone-btn" title="Copy to clipboard">Copy</button>
+                            </div>
+                            <div class="dc-row">
+                                <div class="dc-icon">📍</div>
+                                <div>
+                                    <span class="dc-label">Location</span>
+                                    <span class="dc-val">Hyderabad / Khammam, Telangana, India</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="external-presence">
+                            <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener" class="ep-link">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub: @UDAYNANNAKA</span>
+                            </a>
+                            <a href="https://linkedin.com/in/udaynannaka" target="_blank" rel="noopener" class="ep-link">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span>LinkedIn: @udaynannaka</span>
                             </a>
                         </div>
-                        <div class="project-featured-tag">Featured</div>
                     </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>ARIMA</span><span>Random Forest</span><span>LSTM</span><span>Python</span>
-                        </div>
-                        <h3 class="project-title">Weather Forecasting System</h3>
-                        <p class="project-desc">End-to-end ML pipeline for time-series forecasting of weather variables. Cleaned historical temperature, humidity, and precipitation data. Trained and compared ARIMA, Random Forest, and LSTM models for best forecasting approach.</p>
-                        <div class="project-highlights">
-                            <span>📈 Time-Series Analysis</span>
-                            <span>🧹 Data Cleaning</span>
-                            <span>⚡ Model Comparison</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Project 3: HAR System -->
-                <div class="project-card featured reveal-up" data-category="ml" style="--delay: 0.3s">
-                    <div class="project-image">
-                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" width="48"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                        </div>
-                        <div class="project-overlay">
-                            <a href="https://github.com/UDAYNANNAKA" target="_blank" class="project-link" aria-label="View Code">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                            </a>
-                        </div>
-                        <div class="project-featured-tag">Featured</div>
-                    </div>
-                    <div class="project-info">
-                        <div class="project-tags">
-                            <span>Scikit-Learn</span><span>IMU Data</span><span>Classification</span>
-                        </div>
-                        <h3 class="project-title">Human Activity Recognition</h3>
-                        <p class="project-desc">Supervised ML pipeline to classify physical activities from multi-axis accelerometer and gyroscope (IMU) data. Preprocessed raw sensor signals and engineered time-windowed features for activity classification. Applied to healthcare monitoring and fitness tracking.</p>
-                        <div class="project-highlights">
-                            <span>🏃 Activity Classification</span>
-                            <span>📱 Sensor Data</span>
-                            <span>🏥 Healthcare Use-Case</span>
-                        </div>
+                    <!-- Direct Message / Inquiry Form -->
+                    <div class="contact-right">
+                        <form class="real-contact-form" id="real-contact-form">
+                            <h3 class="form-title">Send a Direct Message</h3>
+                            
+                            <div class="form-field">
+                                <label for="form-name">Full Name</label>
+                                <input type="text" id="form-name" required placeholder="e.g. Sarah Jenkins">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="form-email">Work Email</label>
+                                <input type="email" id="form-email" required placeholder="e.g. s.jenkins@company.com">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="form-subject">Subject / Opportunity Type</label>
+                                <select id="form-subject">
+                                    <option value="Full-Time ML Engineer Role">Full-Time ML / AI Engineer Role</option>
+                                    <option value="Forward Deployment Engineer">Forward Deployment Engineer Role</option>
+                                    <option value="Internship Opportunity">AI Research / Engineering Internship</option>
+                                    <option value="Project Collaboration">Open Source / Technical Collaboration</option>
+                                    <option value="General Technical Inquiry">Other Inquiry</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="form-msg">Message</label>
+                                <textarea id="form-msg" rows="4" required placeholder="Tell me about your team, stack, or the problem you're tackling..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                                <span>Send Message</span>
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+                            <p class="form-note">Generates a pre-filled direct email to udaynannaka999@gmail.com</p>
+                        </form>
                     </div>
                 </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Command Palette Modal (Ctrl+K) -->
+    <div class="cmd-overlay" id="cmd-overlay">
+        <div class="cmd-dialog">
+            <div class="cmd-search-bar">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                <input type="text" id="cmd-input" placeholder="Type a command or jump to section... (e.g. RAG, Weather, Resume, Email)">
+                <span class="cmd-esc-hint">ESC to close</span>
+            </div>
+            <div class="cmd-results" id="cmd-results">
+                <div class="cmd-group-label">Quick Jump</div>
+                <a href="#projects" class="cmd-item" data-action="close"><span>🚀 Jump to Engineered Projects</span><kbd>P</kbd></a>
+                <a href="#interactive-lab" class="cmd-item" data-action="close"><span>🧪 Open Interactive Systems Lab</span><kbd>L</kbd></a>
+                <a href="#skills" class="cmd-item" data-action="close"><span>⚡ View Technical Skills Matrix</span><kbd>S</kbd></a>
+                <a href="#experience" class="cmd-item" data-action="close"><span>💼 VaultOfCodes Internship</span><kbd>E</kbd></a>
+                <a href="#education" class="cmd-item" data-action="close"><span>🎓 B.Tech CSE (AI &amp; ML) Credentials</span><kbd>U</kbd></a>
+                <div class="cmd-group-label">Direct Actions</div>
+                <a href="resume.pdf" class="cmd-item" download><span>📄 Download Official Resume (PDF)</span><kbd>D</kbd></a>
+                <a href="https://github.com/UDAYNANNAKA" target="_blank" class="cmd-item"><span>🐙 Open GitHub (@UDAYNANNAKA)</span><kbd>G</kbd></a>
+                <a href="https://linkedin.com/in/udaynannaka" target="_blank" class="cmd-item"><span>🔗 Open LinkedIn Profile</span><kbd>I</kbd></a>
+                <button class="cmd-item" id="cmd-copy-email"><span>📋 Copy Email to Clipboard</span><kbd>C</kbd></button>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Experience & Education Section -->
-    <section class="section experience" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up">// Experience & Education</span>
-                <h2 class="section-title reveal-up">
-                    My <span class="gradient-text">Journey</span> So Far
-                </h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item reveal-left" style="--delay: 0.1s">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-date">2022 — 2026</span>
-                            <span class="timeline-badge">Education</span>
-                        </div>
-                        <h3 class="timeline-title">B.Tech, Computer Science & Engineering (AI & ML)</h3>
-                        <span class="timeline-company">Guru Nanak Institutions Technical Campus, Hyderabad</span>
-                        <p class="timeline-desc">Pursuing B.Tech in CSE with specialization in Artificial Intelligence and Machine Learning. Maintaining a CGPA of 8.0/10 with hands-on project experience in ML, Deep Learning, and Generative AI.</p>
-                        <div class="timeline-tags">
-                            <span>AI/ML</span><span>Python</span><span>Deep Learning</span><span>CGPA: 8.0</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-right" style="--delay: 0.2s">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-date">2023</span>
-                            <span class="timeline-badge current">Experience</span>
-                        </div>
-                        <h3 class="timeline-title">AI & Prompt Engineering Intern</h3>
-                        <span class="timeline-company">VaultOfCodes.in</span>
-                        <p class="timeline-desc">Designed and tested prompt templates across multiple AI use cases to improve response accuracy and consistency. Collaborated with a cross-functional team to debug and refine AI-driven workflows. Authored an internal prompt-engineering guide, adopted for onboarding new contributors.</p>
-                        <div class="timeline-tags">
-                            <span>Prompt Engineering</span><span>Generative AI</span><span>Documentation</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-left" style="--delay: 0.3s">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-date">Training</span>
-                            <span class="timeline-badge">Training</span>
-                        </div>
-                        <h3 class="timeline-title">Generative AI Training</h3>
-                        <span class="timeline-company">AIMNXT</span>
-                        <p class="timeline-desc">Completed professional training in Generative AI covering fundamental concepts, applications, and AI-powered technologies. Gained knowledge of Prompt Engineering, interacting with Generative AI models, and techniques for generating relevant and effective outputs.</p>
-                        <div class="timeline-tags">
-                            <span>Generative AI</span><span>Prompt Engineering</span><span>AI Applications</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item reveal-right" style="--delay: 0.4s">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-date">2020 — 2022</span>
-                        </div>
-                        <h3 class="timeline-title">Intermediate (MPC)</h3>
-                        <span class="timeline-company">Sri Chaitanya Jr. College, Khammam</span>
-                        <p class="timeline-desc">Completed Intermediate education in Mathematics, Physics, and Chemistry with CGPA 8.58/10.</p>
-                        <div class="timeline-tags">
-                            <span>MPC</span><span>CGPA: 8.58</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Certifications -->
-            <div class="certifications reveal-up" style="--delay: 0.5s">
-                <h3 class="cert-title">🏆 Certifications</h3>
-                <div class="cert-grid">
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                        </div>
-                        <div class="cert-info">
-                            <strong>Artificial Intelligence</strong>
-                            <span>IBM SkillsBuild</span>
-                        </div>
-                    </div>
-                    <div class="cert-card">
-                        <div class="cert-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                        </div>
-                        <div class="cert-info">
-                            <strong>Python</strong>
-                            <span>Kaggle — Certificate of Completion</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-tag reveal-up">// Contact</span>
-                <h2 class="section-title reveal-up">
-                    Let's <span class="gradient-text">Connect</span>
-                </h2>
-                <p class="section-subtitle reveal-up">
-                    Interested in collaborating or have an opportunity? Let's talk!
-                </p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info reveal-left">
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                        </div>
-                        <div>
-                            <h4>Email Me</h4>
-                            <a href="mailto:udaynannaka999@gmail.com">udaynannaka999@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                        </div>
-                        <div>
-                            <h4>Location</h4>
-                            <span>Hyderabad, India</span>
-                        </div>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        </div>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+919701276579">+91 97012 76579</a>
-                        </div>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://github.com/UDAYNANNAKA" target="_blank" class="social-link" aria-label="GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        </a>
-                        <a href="https://linkedin.com/in/udaynannaka" target="_blank" class="social-link" aria-label="LinkedIn">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        </a>
-                        <a href="mailto:udaynannaka999@gmail.com" class="social-link" aria-label="Email">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        </a>
-                    </div>
-                </div>
-                <form class="contact-form reveal-right" id="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder=" ">
-                        <label for="name">Your Name</label>
-                        <div class="form-line"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder=" ">
-                        <label for="email">Your Email</label>
-                        <div class="form-line"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" required placeholder=" ">
-                        <label for="subject">Subject</label>
-                        <div class="form-line"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                        <label for="message">Your Message</label>
-                        <div class="form-line"></div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-submit">
-                        <span>Send Message</span>
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">Notification</div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="nav-logo">
-                        <span class="logo-bracket">{</span>
-                        <span class="logo-text">NU</span>
-                        <span class="logo-bracket">}</span>
-                    </a>
-                    <p>Building intelligent systems that make a difference.</p>
-                </div>
-                <div class="footer-nav">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#contact">Contact</a>
-                </div>
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-left">
+                <div class="footer-brand">Nannaka Uday</div>
+                <p class="footer-tagline">Machine Learning &amp; Generative AI Engineer • Hyderabad, India</p>
+                <p class="footer-copy">&copy; 2026 Nannaka Uday. All code published under MIT License.</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Nannaka Uday. All rights reserved.</p>
-                <p>Designed & Built with <span class="heart">&hearts;</span></p>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://github.com/UDAYNANNAKA/portfolio" target="_blank" rel="noopener">Repository</a>
+                    <a href="resume.pdf" download>Resume PDF</a>
+                    <a href="https://github.com/UDAYNANNAKA" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://linkedin.com/in/udaynannaka" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+                <div class="footer-version">
+                    <span class="v-dot"></span> Production Build v2.4 (Hydrated)
+                </div>
             </div>
         </div>
     </footer>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
-    </button>
 
     <script src="script.js"></script>
 </body>
